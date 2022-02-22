@@ -1,4 +1,4 @@
-package actions;
+package pages;
 
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +13,6 @@ public class CoursePage extends BasePage {
     WebElement pageTitle;
 
     public CoursePage(WebDriver driver) {
-
         super(driver);
     }
 
@@ -22,7 +21,7 @@ public class CoursePage extends BasePage {
         return this;
     }
 
-    public CoursePage waitUntilPageIsLoaded(WebDriverWait wait, String urlPath) {
+    public CoursePage checkUrl(WebDriverWait wait, String urlPath) {
         wait.until(ExpectedConditions.urlContains(urlPath));
         return this;
     }

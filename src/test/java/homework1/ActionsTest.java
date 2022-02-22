@@ -1,7 +1,7 @@
 package homework1;
 
-import actions.CoursePage;
-import actions.MainPage;
+import pages.CoursePage;
+import pages.MainPage;
 import org.junit.jupiter.api.Test;
 
 
@@ -24,7 +24,7 @@ public class ActionsTest extends BaseTest {
                 .moveToElementAndClickOnCourse(actions, mainPage.pythonCourseMenuElement);
 
         coursePage
-                .waitUntilPageIsLoaded(wait, "avtomatizaciya-web-testirovaniya/")
+                .checkUrl(wait, "avtomatizaciya-web-testirovaniya/")
                 .checkTitleEquals("Python QA Engineer");
     }
     }
